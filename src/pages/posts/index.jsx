@@ -6,7 +6,7 @@ const Posts = () => {
   return (
     <div>
       <Head>
-        <title>Index Page</title>
+        <title>Posts Page</title>
       </Head>
       <Header />
       <PostsComponent />

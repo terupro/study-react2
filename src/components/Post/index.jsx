@@ -14,7 +14,7 @@ export const Post = () => {
   return (
     <div>
       <Head>
-        <title>{post?.title}</title>
+        <title>{user?.name}</title>
       </Head>
       <h1>{post?.title}</h1>
       <p>{post?.body}</p>
