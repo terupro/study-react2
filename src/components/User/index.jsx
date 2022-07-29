@@ -1,9 +1,7 @@
-import Head from "next/head";
-import { UserByUserId } from "src/components/User/UserByUserId";
 import { useUser } from "src/hooks/useUser";
 
 export const User = () => {
-  const { user, error, isLoading } = useUser();
+  const { data, error, isLoading } = useUser();
 
   if (isLoading) {
     return <div>ローディング中です</div>;
@@ -14,13 +12,15 @@ export const User = () => {
 
   return (
     <div>
-      <Head>
-        <title>{user.name}</title>
-      </Head>
-      <h1>{user.username}</h1>
-      <UserByUserId id={user.id} />
-      <p>{`Phone: ${user.phone}`}</p>
-      <p>{`Website: ${user.website}`}</p>
+      <h1>{data.name}</h1>
+      <ul>
+        <li>{data.email}</li>
+        <li>{data.username}</li>
+        <li>{data.address.city}</li>
+        <li>{data.phone}</li>
+        <li>{data.website}</li>
+        <li>{data.company.name}</li>
+      </ul>
     </div>
   );
 };

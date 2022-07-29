@@ -13,12 +13,8 @@ export const Comment = () => {
 
   return (
     <div>
-      <Head>
-        <title>{data.name}</title>
-      </Head>
-      <h1>{data.body}</h1>
-      <p>{`Name: ${data.name}`}</p>
-      <p>{`Email: ${data.email}`}</p>
+      <h1>{data.name}</h1>
+      <p>{data.body}</p>
     </div>
   );
 };
