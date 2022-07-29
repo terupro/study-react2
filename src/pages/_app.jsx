@@ -9,7 +9,6 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <Layout>
         <Component {...pageProps} />
-        <h1 className="text-red-500">Hello world!</h1>
       </Layout>
     </>
   );
